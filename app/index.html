@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Demo AngularJS App</title>
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div ng-controller="app0Ctrl">
+    {{text}}
+    <div ng-controller="app1Ctrl">{{text}}</div>
+    <div ng-controller="app2Ctrl">{{text}}</div>
+
+</div>
+
+<div ng-view></div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
