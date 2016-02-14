@@ -1,0 +1,10 @@
+<div style="border-left:1px solid orangered; margin-left:20px;">
+    <h2>This is the partial for view 2.</h2>
+    <button ng-click = "vmView2.pushOne()">Add one element to array</button>
+    <input type="text" ng-model="vmView2.query"/>
+    <table>
+        <tr ng-repeat="obj in vmView2.largeArray | filter:vmView2.query">
+            <td>{{$index}}.</td><td ng-repeat="(key, value) in obj">{{key}}:{{value}},</td>
+        </tr>
+    </table>
+</div>
