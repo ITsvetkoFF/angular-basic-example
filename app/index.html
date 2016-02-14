@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+<!--The code above is actually an example of one of the terms:-->
+<!--Graceful degradation is the practice of building your web functionality so that it provides a certain level of user -->
+<!--experience in more modern browsers, but it will also degrade gracefully to a lower level of user in experience in older -->
+<!--browsers. This lower level is not as nice to use for your site visitors, but it does still provide them with the basic -->
+<!--functionality that they came to your site to use; things do not break for them.-->
+
+<!--Progressive enhancement is similar, but it does things the other way round. You start by establishing a basic level of-->
+<!--user experience that all browsers will be able to provide when rendering your web site, but you also build in more -->
+<!--advanced functionality that will automatically be available to browsers that can use it.-->
+<head>
+    <meta charset="utf-8">
+    <title>Demo AngularJS App</title>
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <!--why do we need normalize.css?-->
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="appController">
+<ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+</ul>
+
+
+<p>now is {{dateNow|date:"MM/dd/yyyy 'at' h:mma"}}</p>
+<controller-date-now-info></controller-date-now-info>
+
+<div>clicked: <input type="checkbox" ng-model="$root.itHasBeenClicked"/></div>
+<button ng-click="scope.$apply();">start digest</button>
+
+<hr/>
+
+<div ng-view></div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="app.controller.js"></script>
+<script src="date-info.directive.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+</body>
+</html>
