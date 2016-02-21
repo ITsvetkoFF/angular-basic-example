@@ -41,3 +41,6 @@ npm start
 
 Now browse to the app at `http://localhost:8000/app/index.html`.
 
+### Extra facts
+
+[Using filters in your HTML causes recalculating digest even when user is not filtering](https://toddmotto.com/use-controller-filters-to-prevent-digest-performance-issues/)
