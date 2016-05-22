@@ -17,7 +17,7 @@ controller('appController', function ($scope) {
     });
 ```
 but this variant can't be minified well.
-We have `ng-controller="appController"`. This code connects our DOM with controller and brings insid the specified DOM element certain scope.
+We have `ng-controller="appController"`. This code connects our DOM with controller and brings inside the specified DOM element certain scope.
 So scope is just an object with data that is connected to certain DOM area. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application.(c)
 
 Also we are using rootScope a bit.
